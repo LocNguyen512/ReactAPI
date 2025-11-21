@@ -31,9 +31,6 @@ Dự án được tổ chức thành hai thư mục chính:
 ---
 
 ## ⚙️ 3. Hướng Dẫn Thiết Lập
-
-### 3.1. Thiết Lập Database (MySQL)
-
 Ứng dụng yêu cầu một MySQL Server đang hoạt động.
 
 #### 🔑 Thông tin Cấu hình Mặc định
@@ -46,15 +43,35 @@ Dự án được tổ chức thành hai thư mục chính:
 | User ID | `root` | Tài khoản truy cập CSDL. |
 | Password | `tanloc@512` | Mật khẩu truy cập CSDL của bạn. |
 
-#### 🔗 Cấu hình Connection String
+---
 
-Bạn cần cập nhật Connection String trong file cấu hình của Backend:
-**File:** `TaskApi/appsettings.json`
+## 🚀 4. Khởi Chạy Backend (.NET Web API)
 
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;Database=PersonalTaskDB;Uid=root;Pwd=[YourPassword];"
-  },
-  // ... các cấu hình khác
-}
+### 4.1. Cổng (Port) API
+
+| Tên | Cổng | Ghi chú |
+| :--- | :--- | :--- |
+| **API Base URL** | `http://localhost:5189` | Cổng HTTP mặc định. |
+| **API Endpoint** | `http://localhost:5189/api/Tasks` | Endpoint để thao tác với Task. |
+
+### 4.2. Quy trình chạy
+
+1.  Mở **Terminal/Command Prompt** trong thư mục **`TaskApi/`**.
+2.  Chạy lệnh sau để khởi động API]:
+    ```bash
+    dotnet run
+    ```
+---
+
+## ⚛️ 5. Khởi Chạy Frontend (React App)
+
+### 5.1. Cấu hình Biến Môi Trường
+
+Frontend cần biết URL của Backend API.
+
+**File:** `task-client/.env` (hoặc `.env.development` nếu dùng Vite)
+
+```dotenv
+# Tên biến môi trường tiêu chuẩn của Vite cho URL API
+VITE_API_BASE_URL=http://localhost:5189
+
