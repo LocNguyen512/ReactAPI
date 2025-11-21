@@ -74,4 +74,33 @@ Frontend cần biết URL của Backend API.
 ```dotenv
 # Tên biến môi trường tiêu chuẩn của Vite cho URL API
 VITE_API_BASE_URL=http://localhost:5189
+```
+### 5.2. Cổng (Port) Frontend
+
+| Tên | Cổng | Ghi chú |
+| :--- | :--- | :--- |
+| **Frontend URL** | `http://localhost:5173`  | Cổng mặc định của Vite. |
+
+### 5.3. Quy trình chạy
+
+1.  **Mở Terminal/Command Prompt** trong thư mục **`task-client/`**.
+2.  **Cài đặt các dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Khởi động ứng dụng React**: 
+    ```bash
+    npm run dev
+    ```
+    Ứng dụng sẽ mở tại `http://localhost:5173`.
+
+---
+
+## ✅ 6. Kiểm Tra Ứng Dụng
+
+Sau khi cả **Backend** (`http://localhost:5189`) và **Frontend** (`http://localhost:5173`) đều đang chạy:
+
+1.  Truy cập **`http://localhost:5173`** trong trình duyệt của bạn.
+2.  Thử thêm, sửa, xóa và lọc task để xác nhận kết nối CSDL thành công.
+
 
