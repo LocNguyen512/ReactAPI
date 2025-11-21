@@ -1,6 +1,6 @@
 # 🎯 Ứng Dụng Quản Lý Task Cá Nhân (Personal Task Manager)
 
-[cite_start]Dự án này là một ứng dụng quản lý tác vụ đơn giản [cite: 2][cite_start], được xây dựng theo kiến trúc **Client-Server** (Backend: ASP.NET Core Web API, Frontend: React)[cite: 2].
+Dự án này là một ứng dụng quản lý tác vụ đơn giản, được xây dựng theo kiến trúc **Client-Server** (Backend: ASP.NET Core Web API, Frontend: React).
 
 -   **Backend:** ASP.NET Core Web API
 -   **Frontend:** React
@@ -21,12 +21,12 @@ Dự án sử dụng các công nghệ sau cho từng thành phần chính:
 
 ## 📂 2. Cấu Trúc Dự Án
 
-[cite_start]Dự án được tổ chức thành hai thư mục chính[cite: 6]:
+Dự án được tổ chức thành hai thư mục chính:
 
 | Thư Mục | Vai Trò | Mô Tả |
 | :--- | :--- | :--- |
-| `TaskApi/` | Backend | [cite_start]Chứa mã nguồn cho **.NET Web API**[cite: 7]. |
-| `task-client/` | Frontend | [cite_start]Chứa mã nguồn cho ứng dụng **React**[cite: 7]. |
+| `TaskApi/` | Backend | Chứa mã nguồn cho **.NET Web API**. |
+| `task-client/` | Frontend | Chứa mã nguồn cho ứng dụng **React**. |
 
 ---
 
@@ -34,23 +34,22 @@ Dự án sử dụng các công nghệ sau cho từng thành phần chính:
 
 ### 3.1. Thiết Lập Database (MySQL)
 
-[cite_start]Ứng dụng yêu cầu một MySQL Server đang hoạt động[cite: 9].
+Ứng dụng yêu cầu một MySQL Server đang hoạt động.
 
 #### 🔑 Thông tin Cấu hình Mặc định
 
 | Cấu hình | Giá trị Mặc định | Ghi chú |
 | :--- | :--- | :--- |
-| Server | `localhost` hoặc `127.0.0.1` | Hoặc tên service Docker nếu có. |
+| Server | `localhost` | Hoặc tên service Docker nếu có. |
 | Port | `3306` | Port MySQL tiêu chuẩn. |
 | Database | `PersonalTaskDB` | Tên CSDL sẽ được tạo. |
 | User ID | `root` | Tài khoản truy cập CSDL. |
-| Password | `[YourPassword]` | Mật khẩu truy cập CSDL của bạn. |
+| Password | `tanloc@512` | Mật khẩu truy cập CSDL của bạn. |
 
 #### 🔗 Cấu hình Connection String
 
-[cite_start]Bạn cần cập nhật Connection String trong file cấu hình của Backend[cite: 13]:
-
-* [cite_start]**File:** `TaskApi/appsettings.json` [cite: 14]
+Bạn cần cập nhật Connection String trong file cấu hình của Backend:
+**File:** `TaskApi/appsettings.json`
 
 ```json
 {
